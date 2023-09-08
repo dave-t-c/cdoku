@@ -3,4 +3,8 @@ project(cdoku C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(cdoku Main.c)
+add_executable(cdoku
+        Main.c
+        Solver.h
+        Solver.c
+        constants.h)
