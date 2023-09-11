@@ -4,9 +4,9 @@
 
 #include <stdio.h>
 #include "Solver.h"
+#include "constants.h"
 
 int main(int argc, char* argv[]){
-    printf("Hello world \n");
     char *board[] = {
             "53..7....",
             "6..195...",
@@ -19,5 +19,25 @@ int main(int argc, char* argv[]){
             "....8..79"
     };
 
-    isValidBoard(board, 0, 0, 0);
+    printf("Original board:\n");
+    for(int i = 0; i < BOARD_WIDTH; ++i){
+        for(int j = 0; j < BOARD_HEIGHT; ++j){
+            char currentChar = board[i][j];
+            printf("%c", currentChar);
+        }
+        printf("\n");
+    }
+
+    solveForIndex(board, 0, 0);
+
+    printf("Final board:\n");
+    for(int i = 0; i < BOARD_WIDTH; ++i){
+        for(int j = 0; j < BOARD_HEIGHT; ++j){
+            char currentChar = board[i][j];
+            printf("%c", currentChar);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }

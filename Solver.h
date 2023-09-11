@@ -7,6 +7,8 @@
 
 #include <stdbool.h>
 
+bool solveForIndex(char** board, int row, int col);
+
 bool isValidBoard(char** board, int row, int col, char choice);
 
 #endif //CDOKU_SOLVER_H
