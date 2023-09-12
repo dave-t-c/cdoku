@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include "Solver.h"
-#include "constants.h"
+#include "Printer.h"
 
 int main(int argc, char* argv[]){
     char *board[] = {
@@ -19,25 +19,13 @@ int main(int argc, char* argv[]){
             "....8..79"
     };
 
-    printf("Original board:\n");
-    for(int i = 0; i < BOARD_WIDTH; ++i){
-        for(int j = 0; j < BOARD_HEIGHT; ++j){
-            char currentChar = board[i][j];
-            printf("%c", currentChar);
-        }
-        printf("\n");
-    }
+    printf("Input board:\n");
+    outputBoard(board);
 
     solveForIndex(board, 0, 0);
 
     printf("Final board:\n");
-    for(int i = 0; i < BOARD_WIDTH; ++i){
-        for(int j = 0; j < BOARD_HEIGHT; ++j){
-            char currentChar = board[i][j];
-            printf("%c", currentChar);
-        }
-        printf("\n");
-    }
+    outputBoard(board);
 
     return 0;
 }

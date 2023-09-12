@@ -7,4 +7,6 @@ add_executable(cdoku
         Main.c
         Solver.h
         Solver.c
-        constants.h)
+        constants.h
+        Printer.h
+        Printer.c)
