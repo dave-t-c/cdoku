@@ -7,4 +7,5 @@
 static const int BOARD_WIDTH = 9;
 static const int BOARD_HEIGHT = 9;
 static const int GRID_WIDTH = 3;
+static const int MAX_FILE_CHAR_WIDTH = 20;
 #endif //CDOKU_CONSTANTS_H

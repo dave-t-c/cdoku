@@ -9,4 +9,7 @@ add_executable(cdoku
         Solver.c
         constants.h
         Printer.h
-        Printer.c)
+        Printer.c
+        Importer.c
+        Importer.h
+)
