@@ -9,6 +9,11 @@
 
 int main(int argc, char* argv[]){
 
+    if (argc > 2 || argc < 2){
+        printf("Invalid arguments, expected file path\n");
+        return 1;
+    }
+
     char** board = importBoard(argv[1]);
     printf("Input board:\n");
     outputBoard(board);

@@ -10,7 +10,7 @@
 #include "constants.h"
 
 char** importBoard(char* filePath){
-    FILE* fp = (errno = 0, fopen(filePath, "r"));
+    FILE* fp = fopen(filePath, "r");
 
     if (fp == NULL){
         if (errno != 0) {
@@ -29,10 +29,11 @@ char** importBoard(char* filePath){
         char* importedRow = malloc(BOARD_WIDTH * sizeof(char));
         int columnIndex = 0;
         char* token;
-        token = strtok(fileRow, ",");
+        char* separator = ",";
+        token = strtok(fileRow, separator);
         while (token != NULL){
             importedRow[columnIndex] = *token;
-            token = strtok(NULL, ",");
+            token = strtok(NULL, separator);
 
             columnIndex++;
         }
@@ -42,6 +43,8 @@ char** importBoard(char* filePath){
         free(importedRow);
         importedRowIndex++;
     }
+
+    fclose(fp);
 
     return importedBoard;
 }
