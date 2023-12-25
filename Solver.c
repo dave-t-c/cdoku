@@ -38,8 +38,6 @@ bool solveForIndex(char *board[], int row, int col) {
         // If the board is valid with this char at this index
         bool isValid = isValidBoard(board, row, col, currChoice);
         if (isValid) {
-
-
             char* existingRow = malloc(BOARD_WIDTH * sizeof(char));
             strcpy(existingRow, board[row]);
             existingRow[col] = currChoice;
@@ -58,7 +56,6 @@ bool solveForIndex(char *board[], int row, int col) {
             }
         }
     }
-
     return false;
 }
 #pragma clang diagnostic pop
@@ -120,7 +117,6 @@ bool isValidSquare(char** board, int row, int column, char choice) {
             }
         }
     }
-
     return true;
 }
 
