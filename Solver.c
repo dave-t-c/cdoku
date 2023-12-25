@@ -149,8 +149,8 @@ bool isValidBoard(char** board, int row, int column, char choice){
         return false;
     }
 
-    bool validBox = isValidSquare(board, row, column, choice);
-    if (!validBox){
+    bool validSquare = isValidSquare(board, row, column, choice);
+    if (!validSquare){
         return false;
     }
 
