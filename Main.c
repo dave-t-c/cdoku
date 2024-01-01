@@ -3,9 +3,11 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "Solver.h"
 #include "Printer.h"
 #include "Importer.h"
+#include "constants.h"
 
 int main(int argc, char* argv[]){
 
@@ -22,6 +24,11 @@ int main(int argc, char* argv[]){
 
     printf("Final board:\n");
     outputBoard(board);
+
+    for (int i = 0; i < BOARD_HEIGHT; ++i) {
+        char* row = board[i];
+        free(row);
+    }
 
     return 0;
 }

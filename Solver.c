@@ -38,13 +38,7 @@ bool solveForIndex(char *board[], int row, int col) {
         // If the board is valid with this char at this index
         bool isValid = isValidBoard(board, row, col, currChoice);
         if (isValid) {
-            char* existingRow = malloc(BOARD_WIDTH * sizeof(char));
-            strcpy(existingRow, board[row]);
-            existingRow[col] = currChoice;
-
-            board[row] = malloc(BOARD_WIDTH * sizeof(char));
-            strcpy(board[row], existingRow);
-            free(existingRow);
+            board[row][col] = currChoice;
 
             // If we can complete the puzzle from here with this move, return true;
             bool canComplete = solveForIndex(board, row, col + 1);
