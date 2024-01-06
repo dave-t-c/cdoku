@@ -44,3 +44,6 @@ cmake ..
 make
 ./cdoku path/to/sudoku/file
 ```
+
+## Example Sudoku Puzzles
+An example puzzle has been included [here](./example-puzzle.csv).
